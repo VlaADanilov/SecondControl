@@ -5,7 +5,7 @@ import java.io.FileOutputStream;
 import java.util.Arrays;
 
 public class Main {
-    public static final String VARIANT = "v11";
+    public static final String VARIANT = "v19";
     public static void main(String[] args) {
         File f = new File(VARIANT);
         File[] files = f.listFiles();
@@ -16,6 +16,7 @@ public class Main {
             parts[index] = new PaintPartThread(file);
             index++;
         }
+
 
         for (PaintPartThread p : parts){
             p.start();
