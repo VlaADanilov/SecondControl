@@ -43,7 +43,7 @@ public class PaintPartThread extends Thread{
                 binary = binary >> 1;
             }
         }
-        really = (countOfOne % 2 == 1) ? 1 : 0;
+        really = countOfOne % 2;
     }
 
     private void readFromFile(){

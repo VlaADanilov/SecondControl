@@ -47,4 +47,17 @@ public class Main {
         }
 
     }
+
+    public static int counter(byte[] arr){
+        int countOfOne = 0;
+        int binary;
+        for (byte b : arr){
+            binary = b & 0xFF;
+            while (binary != 0){
+                countOfOne += binary & 1;
+                binary = binary >> 1;
+            }
+        }
+        return countOfOne % 2;
+    }
 }
