@@ -33,4 +33,11 @@ public class EvenCheckerTest{
         byte[] arr = new byte[] {1,1,1,1,1,1,1,1,1,1,1}; //11 единиц
         Assert.assertEquals(1, Main.counter(arr));
     }
+
+    @Test
+    public void checkSix(){
+        byte[] arr = new byte[] {100, 20, 20, 100, 30, 50}; //1100100 10100 10100 1100100 11110 110010
+        // 3 + 2 + 2 + 3 + 4 + 3 = 17
+        Assert.assertEquals(1, Main.counter(arr));
+    }
 }
